@@ -45,7 +45,7 @@ export default function Links({ refs }: LinksProps) {
   };
 
   return (
-    <FadeIn className="flex justify-center flex-wrap w-full gap-2">
+    <FadeIn className="flex justify-center flex-wrap w-full gap-2 max-w-lg mx-auto">
       {links.map(({ name, refName }, i) => (
         <motion.button
           whileHover={{ scale: 1.05 }}

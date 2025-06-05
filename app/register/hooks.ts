@@ -8,14 +8,9 @@ type Inputs = {
   phone: string;
   church: string;
   city: string;
-  child: boolean;
-  childInfo: string;
-  childAge: string;
+  email: string;
   alerg: string;
   youtime: string;
-  merried: boolean;
-  merriedInfo: string;
-  merriedAge: string;
   house: string;
   comment: string;
   tranfer: string;
@@ -28,15 +23,12 @@ export const useSubmit = () => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const isChild = watch("child");
-  const isMerried = watch("merried");
-
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setLoading(true);
 
     try {
       const result = await fetch(
-        "https://script.google.com/macros/s/AKfycbzj2et57T5QbUQ7s36ixEBDPsNNRGSaSfs-IOS8I41iASM3E1bT2j1tyfyrAiqNpsze_g/exec",
+        "https://script.google.com/macros/s/AKfycbw7FlJAuWz5rBhS0SgkGZYJnmhY6QwsQwiJDNCKNf7L3AjI0q5Ew4O_DE2MBkALZZz4iA/exec",
         {
           redirect: "follow",
           method: "POST",
@@ -49,14 +41,9 @@ export const useSubmit = () => {
             phone: data["phone"] ?? "-",
             church: data["church"] ?? "-",
             city: data["city"] ?? "-",
-            child: data["child"] ?? "-",
-            childInfo: data["childInfo"] ?? "-",
-            childAge: data["childAge"] ?? "-",
+            email: data["email"] ?? "-",
             alerg: data["alerg"] ?? "-",
             youtime: data["youtime"] ?? "-",
-            merried: data["merried"] ?? "-",
-            merriedInfo: data["merriedInfo"] ?? "-",
-            merriedAge: data["merriedAge"] ?? "-",
             house: data["house"] ?? "-",
             comment: data["comment"] ?? "-",
             tranfer: data["tranfer"] ?? "-",
@@ -83,8 +70,6 @@ export const useSubmit = () => {
 
   return {
     onSubmit: handleSubmit(onSubmit),
-    isChild,
-    isMerried,
     register,
     error,
     loading,

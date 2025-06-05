@@ -11,14 +11,14 @@ export const Hero = () => (
     <div className="container mx-auto flex flex-col md:flex-row items-center min-h-[100vh] z-30 relative text-gray-600">
       <FadeIn className="flex flex-col w-full lg:w-3/4 justify-center items-start p-4 sm:mt-0 mt-10">
         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-[#30548B]">
-          <AnimatedText text={"BELCREATION"} />
+          BELCREATION
         </h1>
         <h2 className="text-3xl md:text-5xl leading-relaxed md:leading-snug">
           Семейный выезд для всех возрастов!
         </h2>
-        {/* <Link href="/register" className="mt-4">
+        <Link href="/register" className="mt-4">
           <Button>Регистрация</Button>
-        </Link> */}
+        </Link>
       </FadeIn>
 
       <FadeIn
@@ -30,8 +30,8 @@ export const Hero = () => (
           className="sm:mt-0 mt-[100px]"
           src="/camping.gif"
           alt="Camping"
-          height={600}
-          width={600}
+          height={800}
+          width={800}
           unoptimized
         />
       </FadeIn>
